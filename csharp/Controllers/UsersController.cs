@@ -8,9 +8,9 @@ namespace UsersAPI.Controllers;
 [Route("api/users")]
 public class UsersController : ControllerBase
 {
-    private readonly IUserRepository _repository;
+    private readonly UserRepository _repository;
 
-    public UsersController(IUserRepository userRepository)
+    public UsersController(UserRepository userRepository)
     {
         _repository = userRepository;
     }
@@ -35,10 +35,17 @@ public class UsersController : ControllerBase
     [HttpPost]
     public async Task<IActionResult> Create([FromBody] UserDto userDto)
     {
+        var existingUser = await _repository.GetByEmail(userDto.Email);
+        if (existingUser != null)
+        {
+            return BadRequest("Email is already in use.");
+        }
+
         var user = userDto.ToUser();
 
         await _repository.Add(user);
         return CreatedAtAction(nameof(GetById), new { id = user.Id }, user);
+            
     }
 
 

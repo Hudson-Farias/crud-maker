@@ -11,7 +11,7 @@ builder.Services.AddOpenApi();
 Env.Load();
 
 builder.Services.AddDbContext<AppDbContext>(options => options.UseNpgsql(Env.GetString("DATABASE_URL")));
-builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<UserRepository>();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
