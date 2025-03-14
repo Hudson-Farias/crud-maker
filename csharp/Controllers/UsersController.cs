@@ -15,12 +15,14 @@ public class UsersController : ControllerBase
         _repository = userRepository;
     }
 
+
     [HttpGet]
     public async Task<IActionResult> GetAll()
     {
         var users = await _repository.GetAll();
         return Ok(users);
     }
+
 
     [HttpGet("{id}")]
     public async Task<IActionResult> GetById(int id)
@@ -29,24 +31,27 @@ public class UsersController : ControllerBase
         return user != null ? Ok(user) : NotFound();
     }
 
+
     [HttpPost]
-    public async Task<IActionResult> Create([FromBody] User user)
+    public async Task<IActionResult> Create([FromBody] UserDto userDto)
     {
+        var user = userDto.ToUser();
+
         await _repository.Add(user);
         return CreatedAtAction(nameof(GetById), new { id = user.Id }, user);
     }
 
-    [HttpPut("{id}")]
-    public async Task<IActionResult> Update(int id, [FromBody] User user)
-    {
-        var existingUser = await _repository.GetById(id);
-        if (existingUser == null)
-            return NotFound();
 
-        user.Id = id;
+    [HttpPut("{id}")]
+    public async Task<IActionResult> Update(int id, [FromBody] UserDto userDto)
+    {
+        var user = userDto.ToUserWithId(id);
+        Console.Write(user);
+
         await _repository.Update(user);
         return NoContent();
     }
+
 
     [HttpDelete("{id}")]
     public async Task<IActionResult> Delete(int id)

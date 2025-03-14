@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/codes/meu/profisional/crud-maker/CrudMakerCsharp/CrudMakerCsharp.csproj": {}
+    "/codes/meu/profisional/crud-maker/csharp/CrudMakerCsharp.csproj": {}
   },
   "projects": {
-    "/codes/meu/profisional/crud-maker/CrudMakerCsharp/CrudMakerCsharp.csproj": {
+    "/codes/meu/profisional/crud-maker/csharp/CrudMakerCsharp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/codes/meu/profisional/crud-maker/CrudMakerCsharp/CrudMakerCsharp.csproj",
+        "projectUniqueName": "/codes/meu/profisional/crud-maker/csharp/CrudMakerCsharp.csproj",
         "projectName": "CrudMakerCsharp",
-        "projectPath": "/codes/meu/profisional/crud-maker/CrudMakerCsharp/CrudMakerCsharp.csproj",
+        "projectPath": "/codes/meu/profisional/crud-maker/csharp/CrudMakerCsharp.csproj",
         "packagesPath": "/home/hudson/.nuget/packages/",
-        "outputPath": "/codes/meu/profisional/crud-maker/CrudMakerCsharp/obj/",
+        "outputPath": "/codes/meu/profisional/crud-maker/csharp/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/hudson/.nuget/NuGet/NuGet.Config"

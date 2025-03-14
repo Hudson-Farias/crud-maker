@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CrudMakerCsharp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+18714255d83926339dacb4341ac8383d8d45b00d")]
 [assembly: System.Reflection.AssemblyProductAttribute("CrudMakerCsharp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CrudMakerCsharp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

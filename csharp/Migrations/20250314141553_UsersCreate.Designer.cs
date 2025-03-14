@@ -11,7 +11,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace CrudMakerCsharp.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250312165739_UsersCreate")]
+    [Migration("20250314141553_UsersCreate")]
     partial class UsersCreate
     {
         /// <inheritdoc />
